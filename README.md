@@ -2,15 +2,26 @@
 Space for executing notebooks from A-Practical-Guide-to-Quantum-Machine-Learning-and-Quantum-Optimization book
 
 ## Starting
-1. Create python environment (with any name, here as an example \it qiskit_env)
+1. Install python 3.9
 
-python3 -m venv qiskit039_env
+sudo apt update
+sudo apt install build-essential cmake
+
+sudo add-apt-repository ppa:deadsnakes/ppa
+sudo apt update
+sudo apt install python3.9
+
+2. Create python environment (with any name, here as an example \it qiskit_env)
+
+python3.9 -m venv qiskit_env
 
 2. Source this environment
 
-source qiskit039_env/bin/activate
+source qiskit_env/bin/activate
 
-3. install qiskit in the environment
+3. install qiskit and other dependencies in the environment
 
-# pip install qiskit==0.39.2 - to niestety nie działa, zobaczymy z ostatnią wersją przed 1.0 czyli 0.46
-pip3 install qiskit==
+pip install numpy cmake scikit-build
+pip install qiskit==0.39.2 
+pip install qiskit-aer==0.11.1
+pip install pylatexenc==2.10
